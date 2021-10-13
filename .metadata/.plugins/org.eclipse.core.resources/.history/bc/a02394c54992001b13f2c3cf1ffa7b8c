@@ -1,0 +1,41 @@
+
+public class TestaMetodo {
+
+	public static void main(String[] args) {
+		
+		Conta conta = new Conta();
+		
+		
+		conta.saldo =  100;
+		
+		conta.deposita(50);
+		
+		System.out.println("Saldo da Conta do Paulo: " + conta.saldo);
+
+		
+		boolean conseguiuRetirar = conta.saca(20);
+		
+		System.out.println("Novo saldo da conta do Paulo: " + conta.saldo);
+		System.out.println("Conseguiu sacar: " + conseguiuRetirar);
+		
+		
+		Conta contaM = new Conta();
+		
+		contaM.deposita(1000);
+		
+		boolean sucessoTransferencia = contaM.transfere(400,  conta);
+		if(sucessoTransferencia) {
+			System.out.println("Transferencia com sucesso");
+		}
+		else {
+			System.out.println("Saldo Insuficiente");
+		}
+		
+		
+		
+		System.out.println("Conta da Marcela: " + contaM.saldo);
+		
+		System.out.println("Conta do Paulo pos Transferencia: " + conta.saldo );
+	}
+
+}

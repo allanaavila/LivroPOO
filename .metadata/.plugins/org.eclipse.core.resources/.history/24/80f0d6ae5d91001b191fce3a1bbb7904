@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		PrincipalContaCorrente obj = new PrincipalContaCorrente();
+		
+		Scanner sc = new Scanner(System.in).useDelimiter("\r\n");
+		
+		
+		while(true) {
+			
+			System.out.println("Podemos cadastrar somente 3 contas correntes.");
+			System.out.println("1 - CADASTRAR");
+			System.out.println("2 - SACAR");
+			System.out.println("3 - DEPOSITAR");
+			System.out.println("4 - CONSULTAR");
+			System.out.println("9 -  SAIR");
+			System.out.println("Entre com uma opcao: ");
+			
+			int opcaoMenu = sc.nextInt();
+			
+			
+			switch (opcaoMenu) {
+			
+			case 1:
+				obj.execCadastro();
+				break;
+			case 2: 
+				obj.execSaque();
+				break;
+			case 3: 
+				obj.execDeposito();
+				break;
+			case 4: 
+				obj.execConsulta();
+			default:
+				if(opcaoMenu == 9)
+					System.exit(0);
+				System.out.println("Opcao Invalida");
+			}
+		}
+		
+	}
+	
+	public void execCadastro() {
+		
+	}
+
+}

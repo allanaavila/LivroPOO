@@ -1,0 +1,22 @@
+
+public class TestaMetodo {
+
+	public static void main(String[] args) {
+		
+		Conta conta = new Conta();
+		
+		
+		conta.saldo =  100;
+		
+		conta.deposita(50);
+		
+		System.out.println("Saldo da Conta do Paulo: " + conta.saldo);
+
+		
+		boolean conseguiuRetirar = conta.saca(20);
+		
+		System.out.println("Novo saldo da conta do Paulo: " + conta.saldo);
+		System.out.println("Conseguiu sacar " + conseguiuRetirar);
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class ExemploMatriz {
+
+	public static void main(String[] args) {
+		//usando uma matriz com inicializacao feita pela leitura de dados do teclado
+		
+		double matriz[][] = new double [3][4]; // cria uma matrix com 3 linhas e 4 colunas
+		
+		for(int l = 0; l < matriz.length; l++) {//carregando matriz
+			for(int c = 0; c < matriz[l].length; c++) {
+				matriz[l][c] = l * matriz[l].length + c;
+			}
+		}
+
+	}
+
+}
